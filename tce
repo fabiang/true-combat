@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+./et +set fs_game tcetest +set com_hunkMegs 192 \
+    +set com_zoneMegs 64 +set com_soundMegs 64 +seta cl_maxpackets "125" \
+    +seta cl_packetdup "0" +seta snaps "40" +seta rate "25000" $@

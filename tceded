@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+./etded +set fs_game tcetest +set com_hunkMegs 256 +set com_zoneMegs 128 +set com_soundMegs 64 +set dedicated 1 \
+    +set sv_fps 30 +set match_latejoin 1 +set sv_pure 1 +set net_port 8999 +exec serverconfig.cfg
