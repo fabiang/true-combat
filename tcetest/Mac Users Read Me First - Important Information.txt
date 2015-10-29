@@ -1,0 +1,19 @@
+True Combat: Elite 0.49b
+Mac Notes 24/12/2006
+**********************************************
+
+Important - Please Read
+**********************************************
+
+To update True Combat: Elite to version 0.49b, Mac users will have to perform two simple procedures.
+
+1.) Run the 'Mac users run me first' package in order to update the Wolfenstein Enemy Territory application. In most cases users will simply need to follow the default installation procedure, but for users whose installation of WET/TCE which resides in another drive/folder other than the default Applications folder, will need to point the installer to the relevant path. Do not select the Wolfenstein Enemy Territory folder, select the drive/folder in which WET/TCE sits in, failure to do this will result in the patching process to fail.
+
+2.) After the patch has been installed and completed continue to extract the contents of this zip file into your 'tcetest' folder which should be located at:
+
+/Applications/Wolfenstein Enemy Territory/tcetest  (or wherever your version of W:ET exists)
+
+Once done, double click on the True Combat Elite launcher located in the Applications folder to play!
+
+************************************************
+For support please point your browser to: http://www.truecombatelite.net/forum/viewforum.php?f=17 and be sure to read the Mac TC:E FAQ: http://www.truecombatelite.net/forum/viewtopic.php?t=5225
