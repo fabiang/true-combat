@@ -11,6 +11,14 @@ Installing the games is still a lot of PITA. The goal of this repository is to m
 - True Combat:Elite 0.49b
 - Punkbuster
 
+## Supported operating systems
+
+- Linux
+
+## Setup
+
+TBD
+
 ## License
 
 When using the software included you agree to the LIMITED USE SOFTWARE LICENSE AGREEMENT of
