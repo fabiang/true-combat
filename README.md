@@ -15,16 +15,40 @@ Installing the games is still a lot of PITA. The goal of this repository is to m
 
 - Linux
 
+## Download
+
 ## Setup
 
 ### Linux
 
+Unzip the package into a directory defined by yourself.
 Just run `install.sh`. This will install a Punkbuster update and an ETkey.
+
+## Runing True Combat:Elite
+
+### Linux
+
+Change directory to the path where you've unzipped True Combat:Elite.
+Run:
+
+```
+./tce
+```
 
 ## License
 
 When using the software included you agree to the LIMITED USE SOFTWARE LICENSE AGREEMENT of
-[Enemy Territory](EULA_Wolfenstein_Enemy_Territory.txt) and [True Combat:Elite](EULA_TrueCombat_Elite.txt).
+[Enemy Territory](EULA_Wolfenstein_Enemy_Territory.txt), [True Combat:Elite](EULA_TrueCombat_Elite.txt)
+and to the PUNKBUSTER SOFTWARE LICENSE AGREEMENT of [Punkbuster](PB_EULA.txt).
+
+## Todo
+
+* Support for Windows
+* Support for MacOS X
+* Add Close Quarters Battle
+* Build system to create smaller packages
+** For each plattform
+** For each game
 
 ## Working with the repository
 
@@ -46,7 +70,7 @@ After the setup was finished you can log into the VM:
 vagrant ssh
 ```
 
-Change the directory to `/vagrant` and run
+Change the directory to `/vagrant` and run:
 
 ```
 git fetch
