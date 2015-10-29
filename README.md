@@ -17,7 +17,9 @@ Installing the games is still a lot of PITA. The goal of this repository is to m
 
 ## Setup
 
-TBD
+### Linux
+
+Just run `install.sh`. This will install a Punkbuster update and an ETkey.
 
 ## License
 

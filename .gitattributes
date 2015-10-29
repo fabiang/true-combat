@@ -17,3 +17,4 @@ tcetest/ui_mac filter=lfs diff=lfs merge=lfs -text
 tcetest/qagame_mac.bundle/Contents/MacOS/qagame_mac filter=lfs diff=lfs merge=lfs -text
 *.pkg filter=lfs diff=lfs merge=lfs -text
 *.pax.gz filter=lfs diff=lfs merge=lfs -text
+pb_home/htm/* filter=lfs diff=lfs merge=lfs -text
