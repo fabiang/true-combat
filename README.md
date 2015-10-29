@@ -17,12 +17,14 @@ Installing the games is still a lot of PITA. The goal of this repository is to m
 
 ## Download
 
+**Don't download this packages directly from Github, this won't work**
+
 ## Setup
 
 ### Linux
 
 Unzip the package into a directory defined by yourself.
-Just run `install.sh`. This will install a Punkbuster update and an ETkey.
+Just run `install.sh`. This will install a Punkbuster update and generate an ETkey.
 
 ## Runing True Combat:Elite
 
@@ -35,11 +37,15 @@ Run:
 ./tce
 ```
 
+(the command can take extra arguments)
+
 ## License
 
 When using the software included you agree to the LIMITED USE SOFTWARE LICENSE AGREEMENT of
 [Enemy Territory](EULA_Wolfenstein_Enemy_Territory.txt), [True Combat:Elite](EULA_TrueCombat_Elite.txt)
 and to the PUNKBUSTER SOFTWARE LICENSE AGREEMENT of [Punkbuster](PB_EULA.txt).
+
+All other parts are under [BSD-2-Clause license](LICENSE).
 
 ## Todo
 
@@ -47,13 +53,13 @@ and to the PUNKBUSTER SOFTWARE LICENSE AGREEMENT of [Punkbuster](PB_EULA.txt).
 * Support for MacOS X
 * Add Close Quarters Battle
 * Build system to create smaller packages
-** For each plattform
-** For each game
+  * For each plattform
+  * For each game
 
 ## Working with the repository
 
 Github's [Large File Storage system](https://git-lfs.github.com/) (LFS) is used to store the large binary files.
-This mean you'll need the LFS module for Git installed on your system.
+This means you'll need the LFS module for Git installed on your system.
 
 The provided Vagrantfile can help you to get such setup into a virtual maschine (VM).
 Make sure you installed [Vagrant](https://www.vagrantup.com/) on your system, then run:
@@ -73,5 +79,5 @@ vagrant ssh
 Change the directory to `/vagrant` and run:
 
 ```
-git fetch
+git lfs fetch
 ```
