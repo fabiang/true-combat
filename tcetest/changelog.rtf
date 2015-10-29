@@ -1,0 +1,724 @@
+{\rtf1\ansi\ansicpg1252\uc1\deff0\stshfdbch0\stshfloch0\stshfhich0\stshfbi0\deflang2057\deflangfe2057{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f36\froman\fcharset238\fprq2 Times New Roman CE;}
+{\f37\froman\fcharset204\fprq2 Times New Roman Cyr;}{\f39\froman\fcharset161\fprq2 Times New Roman Greek;}{\f40\froman\fcharset162\fprq2 Times New Roman Tur;}{\f41\froman\fcharset177\fprq2 Times New Roman (Hebrew);}
+{\f42\froman\fcharset178\fprq2 Times New Roman (Arabic);}{\f43\froman\fcharset186\fprq2 Times New Roman Baltic;}{\f44\froman\fcharset163\fprq2 Times New Roman (Vietnamese);}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;
+\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang2057\langfe2057\cgrid\langnp2057\langfenp2057 \snext0 Normal;}{\*\cs10 \additive \ssemihidden 
+Default Paragraph Font;}{\*\ts11\tsrowd\trftsWidthB3\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3\trcbpat1\trcfpat1\tscellwidthfts0\tsvertalt\tsbrdrt\tsbrdrl\tsbrdrb\tsbrdrr\tsbrdrdgl\tsbrdrdgr\tsbrdrh\tsbrdrv 
+\ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs20\lang1024\langfe1024\cgrid\langnp1024\langfenp1024 \snext11 \ssemihidden Normal Table;}}{\*\latentstyles\lsdstimax156\lsdlockeddef0}{\*\rsidtbl \rsid12986458}{\*\generator Micr
+osoft Word 11.0.5604;}{\info{\title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}{\author Michael Starrett}{\operator Michael Starrett}{\creatim\yr2006\mo9\dy25\hr20}{\revtim\yr2006\mo9\dy25\hr20\min1}{\version1}{\edmins1}{\nofpages16}{\nofwords4437}{\nofchars25297}
+{\nofcharsws29675}{\vern24689}}\paperw11906\paperh16838 \widowctrl\ftnbj\aenddoc\noxlattoyen\expshrtn\noultrlspc\dntblnsbdb\nospaceforul\formshade\horzdoc\dgmargin\dghspace180\dgvspace180\dghorigin1800\dgvorigin1440\dghshow1\dgvshow1
+\jexpand\viewkind1\viewscale150\pgbrdrhead\pgbrdrfoot\splytwnine\ftnlytwnine\htmautsp\nolnhtadjtbl\useltbaln\alntblind\lytcalctblwd\lyttblrtgr\lnbrkrule\nobrkwrptbl\snaptogridincell\allowfieldendsel\wrppunct
+\asianbrkrule\rsidroot12986458\newtblstyruls\nogrowautofit \fet0\sectd \linex0\headery708\footery708\colsx708\endnhere\sectlinegrid360\sectdefaultcl\sftnbj {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl2
+\pnucltr\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang {\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl6
+\pnlcltr\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang 
+{\pntxtb (}{\pntxta )}}\pard\plain \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0\pararsid12986458 \fs24\lang2057\langfe2057\cgrid\langnp2057\langfenp2057 {\insrsid12986458 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.4 Build 9.0 PUB 13-09-2006 (Hardballer)
+\par 
+\par -reworked sv_official check
+\par -validated official check on linux and mac
+\par -finalized pak structure
+\par -cleared misc not needed files from paks
+\par -final fixes to all maps
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.4 Build 8.7-8.9 RC1 - RC3
+\par 
+\par -removed some debugging console prints
+\par -added NULL shaders for some shaders referenced in md3 models
+\par -removed loading of ET commandmap shaders 
+\par -changed invisible_marks shader to bouncescale 0
+\par -added clips to ladder brush sides
+\par -fixed some doors with missing opening direction
+\par -made door sounds ranged
+\par -merged bruces UI
+\par -fixed issues with wrong overlay order of menus
+\par -corrected gamma calibration menu
+\par -muzzle and flares brightness depend on worldspawn "exposure" setting
+\par -finalized new HUD, added dynamic eye setting
+\par -rework glass shard bouncing code (no sounds in some conditions) 
+\par -fixed reload bug during fire is pressed
+\par -fixed bug where grenade was stuck in hand when sprint was released during throwing
+\par -introduced static lightmap HDR (perceptive coding of lightmaps)
+\par -introduced dynamic HDR eye effect (cg_dynamiceye) 
+\par -client code reads lightgrid
+\par -added new client side sprites that are lit by lightgrid (HL2 like rotation)
+\par -added correct lighting to smoke and impact effects
+\par -reworked map lighting in all maps for HDR
+\par -added scenario locations in map description
+\par -added obj_stadtrand and obj_delta
+\par -replaced shorts like _tdm and _robj will by _gt2 ... _gt9 (for gametype 2 ... 9)
+\par -introduced _gtX logic for .gear
+\par -updated obj_hideout, obj_village, finished obj_northport and obj_snow
+\par -finished tonemapping conversion (coroner_models ...)
+\par -finished new gras foliage model and straw for hideout
+\par -reworked smoke grenade effects
+\par -add inverted range damage scale for snipers to simululate focus problems with sniper scopes (prevent close combat railgunning)
+\par -sync'd sniper damage when not aimed with same caliber for MBR
+\par -added slow and kick door open (silent and noisy, use walk or sprint key)
+\par -reworked UI menus and scoreboard for widescreen
+\par -reworked HUD elements for widescreen
+\par -reworked capture AXIS/ALLIED text
+\par -updated CTF scripts to end game
+\par -corrected AA level increase and introduce script var for it
+\par -checked player skin tonemapping (desert wasnt finished)
+\par -introduced sv_official check for mapnames
+\par -introduced sv_official checksum verification for /etmain  and /tcetest pak files
+\par -locked code to new scale (1 unit = 2 cm)
+\par -tons of stuff that is not listed here
+\par 
+\par -added botroutes to northport (internal)
+\par -added botroutes to snow (internal)
+\par -bots are disabled on dedicated servers (internal)
+\par -needs now developer 1 and bot_editwaypoints 3 to be able to edit waypoints (internal)
+\par -renamed waypoint edit commands
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.4 Build 8.5-8.6 INT 04-01-2006
+\par 
+\par -reactivated g_gametype 2 (ROBJ) for CTF
+\par -added capture and hold (CAH) code/script
+\par -added capture the flag (CTF) code/script
+\par -added CTF sample map
+\par -deactivated match mode in respawn gametypes 2 and 7
+\par -non-match gametypes increase AA base level all 5 minutes (BUG: is erratically 1 minute for now, should be scriptable in future)
+\par -reworked obj_snow to newscale 1 and added CTF script
+\par -reworked .script loading sequence: gametype specific scripts (eg in GT 2 "mapname_robj.script") are tried first, if it fails, the game loads "mapname.script"
+\par -reworked jump blocking, player can now "climb" structures that block the way even if stamina is to low for jumping
+\par -texture tone mapping transformations to coroner_, twy_, hos_, liq_ textures
+\par -gametype can no longer be changed when the server is running, servers can only run one specific gametype (developer 1 switches this of)
+\par -gametypes load gametype specific UI menus
+\par -added more light beam/cone types
+\par -added new sun blend effect
+\par -removed annoying auto radio in Demolition (has this something todo with firelag on INTEL?)
+\par -objective description stays hidden during match or map, only new map load forces description to reappear
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.4 Build 8.4 INT 29-05-2005
+\par 
+\par -added hostage code
+\par -reworked sample maps
+\par -players can only climb solid world brushes (no doors and other entity brushes)
+\par -converted most 22k sounds to 44k using a harmonic recontruction of the spectrum
+\par -upsampled <11k bandlimited (voice) sounds to 44k 
+\par -changed crouch anims so that they keep the head in a lowered position in sync to FPS view of player
+\par -improved hitboxes for crouching
+\par -improved head hitbox for lean (fixes misaligned left lean head hitbox and more) 
+\par -improved head hitbox when player has pistol
+\par -introduced tiny weapon class dependent minimum spread to avoid unrealistic pin point accuracy with short barreled weapons,
+\par  values compare to real life marksman performance
+\par  (spread radius at 100m distance: stand, crouch, prone)
+\par  pistols: 0.4m, 0.27m, 0.13m
+\par  smgs: 0.2m, 0.13m, 0.07m
+\par  ar: 0.1m, 0.07m, 0.03m
+\par  sniper: 0.0m, 0.0m, 0.0m
+\par -stronger distance falloff for pistols
+\par -all weapons sway similar to sniper in tac mode
+\par -stance and iron sight transition introduce realistic sway
+\par -strongly improved real physics grenade trajectory (center throw, less up angle)
+\par -short throw of grenades when aimed (Q3TC 0.45 style)
+\par -removed team indicator above players head
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.4 Build 8.3 INT 01-05-2005
+\par 
+\par -stepped to ET 2.6 code base
+\par -corrected view origin to match eye height of player models
+\par -heavily reworked bullet tracing origin (leaned shots are perfectly aligned with view)
+\par -locked renderer to "r_mapoverbrightbits 0"
+\par -atmospheric effects (rain or snow) can be disabled in developer mode
+\par -map location names are now displayed under the radar
+\par -added VIP code
+\par -added usable objectives (hack computer, turn valve, ...) code
+\par -added escape code
+\par -added example maps for different objectives
+\par -added 2cm per game unit (SOF2 like) scale option to worldspawn: 
+\par  key "newscale", value "1" activates 2 cm per game unit instead of the default 2.54 cm (1 inch) per game unit scale. 
+\par -added VIP objective to "obj_northport" (former dem_northport) and reworked map for 2cm scale
+\par -reworked "obj_railhouse" (former dem_railhouse) to fit 2cm scale
+\par -footstep volume now depends on speed
+\par -increased footstep range
+\par 
+\par "r_mapovervrightbits 0" compatibility:
+\par 
+\par Map light compile must include the following options in connection with the classic light shader and entity settings:
+\par -areascale 3 -pointscale 3 -sky 3 -gamma 1.6 -samples 2 -filter -bounce 2 -bouncescale 2
+\par 
+\par For debugging, old style maps can be run in compatibility mode by creating a .gear file for the maps that has the statement
+\par "gm_mapoverbrightbits 2" in addition to the weapon definitions.  
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.4 Build 8.2 INT
+\par 
+\par -activated leg player tags to be used with visible equipment
+\par -sure some more but can't remember
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.4 Build 8.1 INT 01-03-2005 (was Build 9 PUB)
+\par 
+\par -fixed team respawn in demolition when last player dies during bomb explosion
+\par -fixed double dropped bomb icons in radar
+\par -fixed bug where two players can have the bomb
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.4 Build 8 PUB 22-02-2005
+\par 
+\par Misc
+\par -fixed some errors in firemode routine (erratic firemode switches)
+\par -removed erratic semi-auto operation of Mossberg 590C  
+\par -dead players don't follow ET Medic class anymore
+\par -reduced lamer protection (ROE-violation time) after spawn to 3 secs (was 5 before)
+\par -team icons are only visible through walls if the player is closer then 256 units (6.5 meters)
+\par -removed team or voice chat for dead/following/spectating players
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.4 Build 7 PUB 17-02-2005
+\par TCETEST UPDATE PATCH 3
+\par 
+\par WARNING: Third party maps should be removed from servers unless the map scripts are revised.
+\par Wait times (wait 3000) in the old scripts (trigger bomb_detonated and trigger bomb_defused) have to be removed
+\par since they might cause unexpected behaviour with the new code. 
+\par 
+\par Game
+\par -completely removed enemy name identifier (was 1.5 seconds delay to avoid "name scanning" before)
+\par -fixed scoreboard
+\par -introduced "damage rating" (DR) = (damage_given - damage_received - team_damage)/100.0f 
+\par -scoreboard now shows score, damage rating (DR), armament availability (AA), ping
+\par -heavily modified AA system: Each team is now splitted in three groups (best, medium, worst) based on score and DR (if score is the same).
+\par The best AA of the best group equals the round number +1, the other groups get modifiers of 0 and -1.
+\par -reduced the AA levels in the loadout to 3 (was 4 before). Shotguns are available from the start.
+\par -players get no negative score for being team killed
+\par -introduced 5 second spawn protection in 1-life. Lamers that attempt to team kill or grenade spam
+\par are passified and "ROE violation" message is broadcasted to everyone.
+\par -auto voices ("contact", "taking fire") are only send all 20 secs (was 10 secs)
+\par -reduced default matchlimit (lms_g_matchlimit) to 2 (was 5). Two matches of five rounds are played before a map 
+\par change is initiated.
+\par -completely reworked ETs trigger/delay system for bullet weapons to Q3TC045 standard. Bullet weapons are now triggered
+\par instantaneously (was 50 msec delay) and semi-auto fire can be retriggerd all 100 msec (was 200 msec before)
+\par -massively reduced retrigger rate of semi-auto and pump shotguns. Semi-auto operation is now faster the pump operation. 
+\par -fixed deployment menu weapon selection, where some guns could not be selected and ghosted guns could be selected.
+\par -fixed problem with saved spawnpoints for the frozen warmup (might not be the problem that occurs on servers though)
+\par -fixed bug where elimination of terrorists could turn a won game after bomb explosion to a lost game. Wait times in bomb_detonated and bomb_defused
+\par trigger events had to be removed from map scripts.
+\par 
+\par Misc
+\par -added announcer voices for round and match end.
+\par -fixed mark projection bug where metal exit shaders where missing
+\par -added missing terror auto radio wave files
+\par -updated mossberg 590c skin
+\par -sun flare is now angle dependent
+\par -flares fall off with distance, improved close-by gloom effects
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.4 Build 6 PUB 09-02-2005
+\par TCETEST UPDATE PATCH 2
+\par 
+\par Game
+\par -added M4 SOPMOD, SPR to Specops
+\par -added Ak-74M Spetsnaz, Sig 552, SPAS-12, Aks-74U SD, Sig 550, SR-8 to Terrorists
+\par -new Armament Availability (AA) System, dependent on round and player score
+\par -reactivated BC being based on same round/team spawn system as OBJ
+\par -fixed bug where bomb doesn't destroy crate
+\par 
+\par Misc
+\par -changed chat position to lower screen part
+\par -moved global messages to top left corner
+\par -added new specops voice
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.4 Build 5 PUB 26-01-2005
+\par TCETEST UPDATE PATCH
+\par 
+\par Game
+\par -replaced numeric ammo counter by bar indicator
+\par -replaced artwork for stamina bar
+\par -removed frames from timer and FPS display
+\par -warmup between rounds is locked to 5 seconds
+\par -players are frozen during warmup in objective mode
+\par -added weapon select bar
+\par -fixed new burst mode
+\par -added target names (target_location)
+\par -locked teamchat or team voicechat when dead
+\par -removed R-OBJ and BC
+\par 
+\par Misc
+\par -new tce_entities.def for GTKRadiant
+\par -further improved environmental sound effect system
+\par -two new contents flags to tweak soundscapes (env_indoor, env_outdoor), sfxhallway was removed
+\par -added angle dependent flares (spawnflag)
+\par -new levelshot (fades to intermission view when entering the game)
+\par -changed UI font to Arial (same font as Hud)
+\par -removed music from debriefing
+\par -added cvar for kill messages (g_killmessage, defaults to 0)
+\par -moved centerprint to private messages
+\par -changed friendly name to UI font and team colors
+\par -enemy names appear after aiming >1.5 seconds at an enemy
+\par 
+\par Maps
+\par -updated intermission cams in maps
+\par -updated soundscapes in maps (in progress)
+\par -added dem_snow
+\par -fixed A-objective rush problem in dem_village
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.4 Build 4 PUB 18-01-2005
+\par TCETEST UPDATE PATCH
+\par 
+\par Game
+\par -fixed ingame server browser
+\par -reintroduced score for eliminating opponents
+\par -introduced penalty for getting killed in BC
+\par 
+\par Scripting
+\par -fixed R-OBJ mission scripting (double plant, broken missions)
+\par -fixed erratic woodland camo in some R-OBJ maps
+\par 
+\par Weapons
+\par -fullauto mode can now be correctly disabled in script
+\par -fixed problems with 2x-burst mode
+\par -trigger can be released during burst mode
+\par -changed m16 to semi-auto/3x-burst
+\par -tac mode is now configurable in UI (TC045 or persistent style)
+\par -fixed problems with wrong defaults/fallback weapons on team change
+\par 
+\par Misc
+\par -fixed feet shuffle anim bug
+\par -added correct feet rotation anims for stand and crouch
+\par -removed experimental 2nd tacmode exploit
+\par -improved environmental sound effect system (new "target_environment" for ambient soundscape & reverb)
+\par -added light beam/cone feature for flares
+\par -sun flare intensity depends on fraction of the sun that is visible
+\par -fixed grenade obituary (reporting wrong weapon)
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par PUBLIC TEST UPDATE
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.4 Build 3 REL 21-12-2004
+\par TCETEST UPDATE
+\par 
+\par -moved chat print line to top (q3 like)
+\par -it is checked whether persistant firemode is available on current weapon
+\par -fixed disappearing TP weapon on prone transition
+\par -discabled g_dynamite mode
+\par -added m16 and mac10 SD model
+\par -fixed 500 ms to short grenade fuse times
+\par -changed m84 flashbang timer to 2500 ms
+\par -fixed painskin fogging errors
+\par -fixed low stamina jump problems
+\par -much more
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.4 Build 2 PUB 14-12-2004
+\par POST TCETEST
+\par 
+\par Movement
+\par -fixed Q3's steep surface landing bug where no falling damage is applied (northport railing bug)
+\par -reduced stamina consumption during sprint
+\par -limited rotation speed during prone (no instant twisting anymore)
+\par 
+\par Objective
+\par -added reinforced objective (R-OBJ) gametype as Bodycount replacement
+\par -added random spawngroup selection for R-OBJ wave respawn
+\par -attacks during spawnprotection immediatly kills attacker and sends out "violated ROE" message to all players
+\par -removed scores for killing
+\par -added score penalty for dying
+\par -teamkills, suicides and ROE violations score -3
+\par 
+\par Scripting
+\par -added team scoring to script
+\par 
+\par Weapons
+\par -introduced portal based scopes
+\par -changed psg/m76 zoom to 4x, r93 zoom to 6x
+\par -changed grenade timers to realistic values, 2000, 4000, 6000 msec for m84, m67, and m83, respectively
+\par -weapon availability depends on round in stock missions
+\par 
+\par Maps
+\par -code hacked dem_northport and railhouse to get R-OBJ working
+\par -added tracemaps to all maps
+\par 
+\par Misc
+\par -removed fireteam as they are currently broken
+\par -cleaned up weird font/color mixtures in HUD
+\par -added weapons to death messages: Target <<< Attacker(WEAPON)
+\par -use red/blue color coding for teams in messages
+\par -removed colored name strings
+\par -moved chat line to top of the screen
+\par -splitted popup messages in private and general
+\par -partly moved center printing to private popup messages
+\par -fixed damage skin glow effect in foggy maps
+\par -added aimed TP animation to prone
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.4 Build 1 PUB 27-11-2004
+\par POST TCETEST
+\par 
+\par Movement
+\par -reduced movement speed by 15%, subject to be changed (see priliminary speed table, max speed was erratically 300 units/sec)
+\par -implemeted physically correct acceleration routine, fixes Q3 circle run accelaration 
+\par -stamina/speed is to 67% effected by handweapon and 33% by weapons carried on the back
+\par -introduced TC0.45 direction dependent jump code, strongly reduced strafe and backwards jump
+\par -jump frequency is dependent on stamina
+\par -removed jump during out-of-stamina sprint
+\par -fixed stairbug where players were catapulted off stairs and die 
+\par 
+\par Scripting
+\par -added scriptable weapon characteristics and loadout for missions (myweapon.specs, mymap.gear)
+\par -introduced 3 soft classes: assault, recon, sniper
+\par -weapon availability can be round dependent, e.g., certain weapons can be rewarded to classes on a round number base
+\par 
+\par Weapons
+\par -completely reworked accuracy/spread handling
+\par -separated accuracy penalty accumulators for movement and previous shots
+\par -changed non-linear behaviour of shot spread accumulator (3 shots are accurate, inaccuracy rises fast afterwards)
+\par -first shot is pin point for all weapons
+\par -weapon stability is indicated as 3D sights movement
+\par -more realistic, more tight shotgun spread pattern (1m dish at 40m), slightly more distance falloff
+\par -reduced pistol damage by 15%
+\par -reduced knife damage by 25%
+\par -completely new sniper aim drift and aim axis sway, including breathing and possibly hold breath feature
+\par -reduced scoped weapon recoil in combination with new aim sway
+\par -slightly lowered PSG-1/M76 damage
+\par -firemode selection stays persistant across respawns and map load
+\par -added flashbang audio effect (beep and attenuation of other sounds)
+\par -added grenade prime sound
+\par 
+\par Objective
+\par -decreased c4 timer to 45 secs
+\par -decreased defuse time to 5 secs when having techkit (was 6)
+\par -decreased plant time to 2/4 secs with or without techkit (was 3/5)
+\par 
+\par Misc
+\par -scopes have individual reticles
+\par -airborne players suffer from maximum spread
+\par -maps now correctly appear in UI host menu
+\par -maps can be started from UI host menu
+\par -removed /testgun exploit
+\par -body impact makes correct flesh hit sound
+\par -players are pierced like other materials
+\par -strongly reduced knockback and made it damage dependent
+\par -added bullet-flyby effect when bullets pass really close
+\par -removed disconnect/drop bug
+\par -added TC0.45 metal fence pierce effect
+\par -added knife slash marks
+\par -removed knife slash sound effect and mark for soft materials
+\par -changed standard bullet wholes
+\par -decreased sound range and characterictics of impact effect
+\par -bodies sink only 12 units into ground
+\par -removed heartbeat effect if following or dead
+\par -jump ends crouch without breaking aim state
+\par 
+\par Many other minor issues
+\par 
+\par 
+\par speed tables (10% adjustment)
+\par 
+\par weapon 
+\par class                      secs/100m
+\par      sprint     run       walk      tac       tacwalk
+\par smg  14.5305*   21.2027   32.2150   32.7223   41.9771
+\par ar   15.6230*   22.8337   34.6311   35.2181   45.6674
+\par sr   17.3880*   25.3398   38.4790   38.8386   50.6796
+\par 
+\par *can't run 100m straight, 
+\par  sprinting without stamina gives 10% higher speed as in run
+\par 
+\par                         units(inches)/sec
+\par      sprint     run       walk      tac       tacwalk
+\par smg  270.9474   185.6842  122.2105  120.3158  93.7895 
+\par ar   252.0000   172.4211  113.6842  111.7895  86.2105
+\par sr   226.4211   155.3684  102.3158  101.3684  77.6842
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par PUBLIC TCETEST
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.3 Build 3 PUB 27-10-2004
+\par PUBLIC TCETEST
+\par 
+\par -reduced weap damage by 10% except for m3s90 and knife
+\par -doubled knife damage
+\par -silenced weapons have reduced penetration and distance capabilities
+\par -silenced weapons limit to small grenade loadout and no tech kit like snipers
+\par -ui says "more to right" in the gun positioning setting
+\par -reduced clips to 3 extra
+\par -reduced mac10 clips to 2 extra
+\par -changed pickup message for bombs to "demolition charge" instead of "dynamite"
+\par -changed pickup message for health to "Painkillers" instead of "20 Painkillers"
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.3 Build 2 RC3 26-10-2004
+\par 
+\par -increased damage by 50%
+\par -lowered sprint range by 20%
+\par -decreased health packets to 20
+\par -"aksu-74" appears on pickup instead of "m16"
+\par -renamed pickup from "20 Med Health" to "20 Painkillers"
+\par -removed "Shuffle XP" from vote and ref menu
+\par -fixed far sounds for various guns
+\par -added missing specops woodland camo faces
+\par -removed type 1 flares from scope effects
+\par -all weapons spawn with 5 clips now
+\par -added "TCE TEST" to load screen
+\par -updated credits screen
+\par -added TT logo to credits and main menu screen
+\par -gametype vote messages are now correct
+\par -inactivity causes bomb carriers to drop bomb after 15 secs, or 5 secs when they don't move after round start
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.3 Build 1 RC2 21-10-2004
+\par 
+\par -removed Mossberg
+\par -made m3s90 pump/semi selectable
+\par -removed Micro Uzi and added Mac 10 to both teams
+\par -tweaked AKSU model
+\par -added missing glock world model
+\par -changed mac10 sound
+\par -removed far sound for silenced weapons
+\par -added team counter in deploy menu
+\par -longer terror route in dem_snow
+\par -removed firemode crash issue
+\par -added firemode sound and anim
+\par -removed flashbang bug (new flash no longer resets previous)
+\par -changed mac10 recoil anim in tac
+\par -deathmatch spawn have team spawnflags now
+\par -knife is "full auto" again
+\par -fixed flares on scopes for new flare types
+\par -load message appears correctly in Bodycount
+\par -new terror arm skins
+\par  
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.3 Build 0 RC1 12-10-2004
+\par 
+\par -added different head skins, helmet, protec helmet for specops/woodland
+\par -added different helmet, googles, protec helmet combinations for specops/commando
+\par -increased pump shot re-trigger rate by 15%
+\par -added prone move sound
+\par -added tc0.45 heartbeat sound
+\par -bomb carrier does no longer show bomb icon after planting
+\par -glass shards make sound when they fall on ground
+\par -fixed floating weapons on players back
+\par -updated sleeve skins with higher resolution camo
+\par -terrorists finally show correct head pain skin
+\par -clients with connection loss can't receive bomb
+\par -clients drop bomb after 3 secs of connection loss
+\par -cg_drawFriend determines teammate icon 0 = none, 1 = not visible through walls, 2 = default, visible through walls
+\par -added cg_drawFriend to "customize hud UI"
+\par -removed WEAPON and SCOPE section from "customize game UI"
+\par -completely removed slide/skating after landing
+\par -much faster rejump ability, jumping is allowed 250 msec after landing
+\par -landing time no longer influences jump power, out-of-stamina jumps have half power
+\par -added weapon cycle during tacmode
+\par -jumping players can't go tac anymore (to avoid flickering tac transition)
+\par -cursorHints are solid if enabled, no status bar except for bomb/defuse
+\par -changes for button defaults in default.cfg (tac defaults to MOUSE2 ... )
+\par -added "dead man's click" when clip is empty
+\par -grenades are thrown from center
+\par -exchanged dynamite model to altered q3tc1.x c4 model
+\par -removed "dynamite" from voice messages
+\par -added c4 explosives icon for popup messages and hud
+\par -c4 explosives model is shown on the back of the player with bomb
+\par -included Raptors new sidearm animations (last shot with slider staying back and non-empty reload with slider in front position) 
+\par -added new weapons MP5SD (Specops) and AKSU-74SD (Terror)
+\par -added new weapon MicroUzi (Specops, Mac 10 equivalent)
+\par -changed MP5 to Specops only
+\par -changed UMP45 to both teams
+\par -added new weapon AKSU-74 (Terror, MP5 equivalent)
+\par -added new weapon Mossberg 590c (Both, compact pump shot)
+\par -added new weapon G3A4 (Both, slow high caliber assault rifle)
+\par -changed akimbos to glock, used new hand/sleeve models
+\par -added akimbo berettas for Specops
+\par -MicroUzi/Mac10 are now in sidearm slot and selectable only in combination with small smgs/mossberg
+\par -Akimbos are selectable only in combination with small smgs/mossberg
+\par -changed Benelli M3 Super90 to semi-auto operation
+\par -Benelli M3 Super90 has 8 shells now
+\par -added firemode switch for some weapons
+\par -implemented burst fire mode
+\par -changed view gun position/appearance according to Race's suggestions
+\par -horizontal position of view gun is now configurable in UI
+\par -new recoil anim (coded) for snipers and M3 Super90 
+\par -updates to dem_snow
+\par -updates to dem_village
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.2 Build 10 PRE 09-09-2004
+\par 
+\par -fixed weapon restriction bug
+\par -fixed weapon drop and slow down when landing
+\par -added new version of dem_village
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.2 Build 9b PRE 01-09-2004 MINI UPDATE
+\par 
+\par -fixed crash bug in piercing routine on maps with multiple FUNC_EXPLOSIVEs
+\par  (why the hell did I comment out that stable old 0.45 code :))
+\par -introduced slow (1-sec) prone transition in first person view
+\par -temporarely removed weapons models on players backs (will be fixed next version)
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.2 Build 9 PRE 22-08-2004
+\par 
+\par -fixed LUGER bug
+\par -no sprint on ladders
+\par -lean not allowed on ladder or when dead
+\par -lean forces to walk
+\par -always play pickup animation on weapon pickup
+\par -scoped weapons show correct scope view after pickup
+\par -removed knife icon when knife carrier looks at enemies
+\par -crouched characters bob much slower
+\par -drop client weapon immediatly on death
+\par -removed "You are near ..." track in Bodycount
+\par -removed 1-sec ice-skating effect after falling
+\par -increased pistol delay slightly to previous value in order to match server time frames
+\par -smg damage increased by 50%
+\par -assault rifle damage increased by 50%
+\par -pistol damage increased by 33% (relatively lowered)
+\par -sniper rifle damage increased by 25%
+\par -only show pickup icon for health if health <= 0
+\par -spawnprotect icon removed
+\par -defuse area tolarance increased
+\par -defuse hint icon/activation overrides any other activation
+\par -removed breath puff from bodies
+\par -removed weapon/health pickup sounds
+\par -removed vote gong sound
+\par -removed short distance footstep/land sound when walking
+\par -introduced TC 0.45 circular floating aim point for hip shooting (non-predictable, non-center
+\par  aim point, lamers can no longer mark the aim point on their display)
+\par -removed campaign vote option
+\par -map list for bodycount appears correctly
+\par -gametype description appears correctly
+\par -gametypes in host server menu restricted to Demolition and Bodycount
+\par -new deploy menu
+\par -introduced primary/sidearm/special slots in deploy menu
+\par -introduced Techkit for faster bomb/defuse times (techkit is traded against 2 frag grenades)
+\par -fragmentation grenade loadout is now dependent on primary weapon (smg: 2 frag, assault: 1 frag, siper: 0 frag)
+\par -Techpak carriers have highest priority for explosive assignment in 1-bomb mode
+\par -some fixes in g_dynamitemode 1 (gives bomb to only one player of the bombing team)
+\par -g_dynamitemode 1 is now default
+\par -updates/fixes to snow camo group (models and skin: helmets, googles, ...)
+\par -removed ET player highlighting for distances > 384 units (player glow)
+\par -don't allow prone while jumping or airborne or while standing on another player
+\par -don't allow prone for 750 msec after landing
+\par -removed prone-stuck bug when falling off ledges while proned
+\par -urban model for all Specops characters available
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.2 Build 8 PRE 10-08-2004
+\par 
+\par -reduced smg spread
+\par -increased smg damage
+\par -reduced mac10 recoil
+\par -increased ak47 recoil
+\par -pistols are slightly faster
+\par -introduced distance falloff dependent on weapon/caliber
+\par -movement view bobbing as in .45
+\par -locked cg_fov
+\par -player model bends during lean, lean shot allowed in tac mode, moving allowed
+\par -experimental g_dynamitemode 1 gives bomb to only one player in bombing team
+\par -internal code changes for demolition objective handling
+\par -new brightness calibration menu
+\par -adjusted player skin brightness
+\par -ak47 and knife have correct arm skins now
+\par -increased mp5 and r93 skin brightness
+\par -terrorists show correct head pain skin
+\par -removed health bar under teammates, name is shown in lower quarter of screen
+\par -killer message is shown in demolition gametype (5), death messages in bodycount gametype (7)
+\par -primary weapon is dropped on death
+\par -dropped weapons can be picked up (grab sign indicates this)
+\par -new "wm_camo" to select player camo group in map script (not defined = woodland, 1 = desert, 2 = snow, 3 = commando)
+\par -added desert, snow and commando camos for specops
+\par -first person arm/sleeve camo can now be linked to player skin, so that sleeves show correct camo, currently working for specops
+\par -introduced new stair contents shader for steep (45 degree) and very steep (~70 degree) stairs
+\par -falling damage doesn't gib
+\par -introduced new gametype bodycount (COD team deathmatch like) (7) using mapname_tdm.script and info_player_deathmatch spawns
+\par -new map dem_snow
+\par -updated map dem_industrial
+\par -updated map dem_village
+\par -map et_sample changed to dem_sample
+\par -major repak of pak files to deal with ET pure check issues:
+\par  update with overwrite enabled, delete the following paks (if existing):
+\par  pak2.pk3
+\par  weapons2.pk3
+\par  dem_wood0.pk3
+\par  tc_tweety0.pk3
+\par  mapmedia2.pk3
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.2 Build 7 PRE 08-07-2004
+\par 
+\par -shotty ammo indicator displays bullets correctly
+\par -shotty arm skin fixed
+\par -pistols 25% faster
+\par -knife has 150% more damage
+\par -always get default weapon set if selected invalid weapon for some reason
+\par -team swap results in correct equivalent weapon set
+\par -added "let's go" at round start, removed "fight" print
+\par -auto "fire in the hole" radio when frag gren is thrown
+\par -muzzle flashes less visible
+\par -default lms_round_limit and match_limit increased to 5
+\par -opposing team scores are no longer shown
+\par -model lighting r_ambientscale is now 1.0
+\par -all maps follow naming convention dem_ for demolition gametype
+\par -new map dem_wood
+\par -all tc_northportX.pk3 need to be removed
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.2 Build 6 PRE 29-06-2004
+\par 
+\par -planting is now straight below player
+\par -dynamite should be easier to defuse
+\par -grenades don't pass fence anymore
+\par -grenade world models are correct
+\par -ppl slide off other players when try to stay on top of them, jump is disabled
+\par -bombing team can't defuse own bomb (lamer protection)
+\par -fixed missing follow names
+\par -akimbo also shows bullet impacts when local impact prediction is activated (g_predictBullets == 1 (default))
+\par -sound should always play at end of round
+\par -specops faces have correct pain skins
+\par -UI now says Aim / Iron Sight to make it more obvious to noobs
+\par -added dem_village and dem_industrial by tweety
+\par 
+\par 
+\par %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par Beta 0.2 Build 5 PRE and earlier
+\par 
+\par -now auto jump to spectator when dead anim is finished
+\par -cycle through dying anim is gone
+\par -fixed dynamite collision with player
+\par -no lean in sniper scope view
+\par -M3S90 slightly more power
+\par -Snipers 25% less power, more spread from tac cycling
+\par -movement penalty for heavy equipment, snipers are 10% slower, SMG is 8% faster, assault stays same
+\par -weapon slots now 1-primary, 2-sec, 3-knife
+\par -drawgun 0 cheat protected
+\par -server and client aim state is synchronized
+\par -primed grenade explodes during sprint
+\par -reworked weapon cycle, added weapon names during change
+\par -removed afro head
+\par -added lagometer and drawFPS to UI, removed crosshair settings
+\par -1000 other things
+\par }{\insrsid12986458 
+\par }}

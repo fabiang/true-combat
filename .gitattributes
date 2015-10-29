@@ -8,3 +8,10 @@ etded.x86 filter=lfs diff=lfs merge=lfs -text
 *.pk3 filter=lfs diff=lfs merge=lfs -text
 pbweb.x86 filter=lfs diff=lfs merge=lfs -text
 pb/html/* filter=lfs diff=lfs merge=lfs -text
+tcetest/cgame_mac filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.dat filter=lfs diff=lfs merge=lfs -text
+*.ico filter=lfs diff=lfs merge=lfs -text
+tcetest/ui_mac filter=lfs diff=lfs merge=lfs -text
+*.exe filter=lfs diff=lfs merge=lfs -text
+tcetest/qagame_mac.bundle/Contents/MacOS/qagame_mac filter=lfs diff=lfs merge=lfs -text
