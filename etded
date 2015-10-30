@@ -1,7 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash
 # Needed to make symlinks/shortcuts work.
 # the binaries must run with correct working directory
-cd "/data/f.grutschus/true-combat/"
+ET_PATH="`dirname \"$0\"`"
+cd $ET_PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:.
 exec ./etded.x86 "$@"
 
