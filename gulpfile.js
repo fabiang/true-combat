@@ -57,6 +57,6 @@ gulp.task('build-windows', function () {
             return newItem + '"';
         })
         .join(' ');
-    var command = '/usr/bin/zip -9rq "dist/true-combat-linux-complete-0.49b.zip" . -x ' + excludes;
+    var command = '/usr/bin/zip -9rq "dist/true-combat-windows-complete-0.49b.zip" . -x ' + excludes;
     exec(command, { cwd: cwd });
 });
