@@ -67,9 +67,37 @@ Vagrant.configure(2) do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
-     sudo apt-get update
-     sudo apt-get install -y -qq git
-     curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
-     sudo apt-get install -y -qq git-lfs
+      sudo apt-get update
+      if [ ! -f /usr/bin/npm ]
+      then
+        sudo apt-get install -y -qq git
+      fi
+
+      if [ ! -f /usr/bin/git-lfs ]
+      then
+        curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+        sudo apt-get install -y -qq git-lfs
+      fi
+
+      if [ ! -f /usr/bin/node ]
+      then
+        sudo apt-get install -y -qq nodejs
+        sudo ln -s /usr/bin/nodejs /usr/bin/node
+      fi
+
+      if [ ! -f /usr/bin/npm ]
+      then
+        sudo apt-get install -y -qq npm
+      fi
+
+      if [ ! -f /usr/local/bin/gulp ]
+      then
+        sudo npm install --global gulp
+      fi
+
+      if [ ! -f /usr/bin/zip ]
+      then
+        apt-get install -y -qq zip
+      fi
   SHELL
 end
