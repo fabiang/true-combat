@@ -43,18 +43,17 @@ gulp.task('build-linux', function (done) {
         return "--exclude='" + item + "'";
     });
 
-    var command = '/bin/tar --exclude-vcs -cvz ' + excludes.join(' ') + ' -f '
+    var command = 'XZ_OPT=-9 GZIP=-9 BZIP=-9 /bin/tar --exclude-vcs --create --gzip ' + excludes.join(' ') + ' --file '
         + 'dist/true-combat-linux-complete-0.49b.tar.gz *';
     exec(command, { cwd: cwd }, done);
 });
 
 gulp.task('build-windows', function (done) {
     var excludes = commonIgnore.concat(windowsIgnore).map(function (item) {
-            var newItem = '"' +  item;
-            if ('/' === newItem.substr(-1, 1)) {
-                newItem += '*';
+            if ('/' === item.substr(-1, 1)) {
+                item += '*';
             }
-            return newItem + '"';
+            return '"' + item + '"';
         })
         .join(' ');
     var command = '/usr/bin/zip -9rq "dist/true-combat-windows-complete-0.49b.zip" . -x ' + excludes;

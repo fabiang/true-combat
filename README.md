@@ -17,7 +17,7 @@ Installing the games is still a lot of PITA. The goal of this repository is to m
 
 ## Download
 
-**Don't download this packages directly from Github, this won't work**
+**Don't download this package as snapshot from Github (Download Zip button). It won't include all game files!**
 
 ## Setup
 
@@ -53,7 +53,6 @@ All other parts are under [BSD-2-Clause license](LICENSE).
 * Support for MacOS X
 * Add Close Quarters Battle
 * Build system to create smaller packages
-  * For each plattform
   * For each game
 
 ## Working with the repository
@@ -80,4 +79,21 @@ Change the directory to `/vagrant` and run:
 
 ```
 git lfs fetch
+```
+
+## Building platform packages
+
+[Gulp](http://gulpjs.com) is used as build platform specific packages.
+The Vagrant VM provides Nodejs, npm and gulp preinstalled.
+
+To compile for Linux run:
+
+```
+gulp build-linux
+```
+
+and for Windows:
+
+```
+gulp build-windows
 ```
