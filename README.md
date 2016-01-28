@@ -19,6 +19,8 @@ Installing the games is still a lot of PITA. The goal of this repository is to m
 
 **Don't download this package as snapshot from Github (Download Zip button). It won't include all game files!**
 
+Just download custom build platform packages under "Releases" above.
+
 ## Setup
 
 ### Linux
