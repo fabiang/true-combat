@@ -23,10 +23,19 @@ Just download custom build platform packages under "Releases" above.
 
 ## Setup
 
+Unzip the package into a directory defined by yourself.
+
 ### Linux
 
-Unzip the package into a directory defined by yourself.
-Just run `install.sh`. This will install a Punkbuster update and generate an ETkey.
+Just cd the the folder where you unpacked the archive and run
+
+```
+./install
+```
+
+### Windows
+
+Double click `install.exe`
 
 ## Runing True Combat:Elite
 
@@ -39,7 +48,11 @@ Run:
 ./tce
 ```
 
-(the command can take extra arguments)
+The command can take extra arguments.
+
+### Windows
+
+Double click TCE in the folder where you've unpacked the archive.
 
 ## License
 
@@ -51,7 +64,6 @@ All other parts are under [BSD-2-Clause license](LICENSE).
 
 ## Todo
 
-* Support for Windows
 * Support for MacOS X
 * Add Close Quarters Battle
 * Build system to create smaller packages

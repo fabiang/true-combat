@@ -41,6 +41,7 @@ var windowsIgnore = [
     'pb/*.so',
     'etmain/*.so',
     'tcetest/*.so',
+    'TCE.lnk',
 ];
 
 var cwd = process.cwd();
