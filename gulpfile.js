@@ -35,7 +35,7 @@ var cwd = process.cwd();
 
 gulp.task('default', ['build-linux', 'build-windows']);
 
-gulp.task('build-linux', function () {
+gulp.task('build-linux', function (done) {
     var excludes = commonIgnore.concat(linuxIgnore).map(function (item) {
         if ('/' === item.substr(-1, 1)) {
             item = item.substr(0, item.length - 1);
@@ -45,10 +45,10 @@ gulp.task('build-linux', function () {
 
     var command = '/bin/tar --exclude-vcs -cvz ' + excludes.join(' ') + ' -f '
         + 'dist/true-combat-linux-complete-0.49b.tar.gz *';
-    exec(command, { cwd: cwd });
+    exec(command, { cwd: cwd }, done);
 });
 
-gulp.task('build-windows', function () {
+gulp.task('build-windows', function (done) {
     var excludes = commonIgnore.concat(windowsIgnore).map(function (item) {
             var newItem = '"' +  item;
             if ('/' === newItem.substr(-1, 1)) {
@@ -58,5 +58,5 @@ gulp.task('build-windows', function () {
         })
         .join(' ');
     var command = '/usr/bin/zip -9rq "dist/true-combat-windows-complete-0.49b.zip" . -x ' + excludes;
-    exec(command, { cwd: cwd });
+    exec(command, { cwd: cwd }, done);
 });
