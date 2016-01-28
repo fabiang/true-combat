@@ -19,6 +19,13 @@ var linuxIgnore = [
     'ET.exe',
     'ETDED.exe',
     'install.exe',
+    'pb/*.dll',
+    'pb/dll/',
+    'etmain/*.dll',
+    'etmain/pbsvc.exe',
+    'tcetest/*.dll',
+    'tcetest/*.exe',
+    'Shortcut.exe',
 ];
 
 var windowsIgnore = [
@@ -30,7 +37,10 @@ var windowsIgnore = [
     'et',
     'et.x86',
     'ET.xpm',
-    'install'
+    'install',
+    'pb/*.so',
+    'etmain/*.so',
+    'tcetest/*.so',
 ];
 
 var cwd = process.cwd();

@@ -4,10 +4,12 @@ import (
         "fmt"
         "os"
         "os/user"
+        "os/exec"
         "path/filepath"
         "io"
         "io/ioutil"
         "net/http"
+        "runtime"
 )
 
 func CopyFile(source string, dest string) (err error) {
@@ -123,7 +125,6 @@ func main() {
 
         if _, err = os.Stat(etkey); err == nil {
             fmt.Println(etkey + " already exists!")
-            os.Exit(0)
         } else {
             res, err := http.Get("http://etkey.org/distpb.php")
             check(err)
@@ -141,6 +142,22 @@ func main() {
             f.Write(etkeyContent)
             f.Sync()
             fmt.Println("ETKey generated successfully.")
+        }
+
+        _ , err = os.Stat(cwd + "/tce.lnk");
+        if runtime.GOOS == "windows" && os.IsNotExist(err) {
+            os.Chdir(cwd)
+            fmt.Println(os.Getwd())
+            c := exec.Command(
+                cwd + "\\Shortcut.exe",
+                "/F:TCE.lnk",
+                "/A:c",
+                "/T:" + cwd + "\\ET.exe",
+                "/P:+set fs_game tcetest +set com_hunkMegs 192 +set com_zoneMegs 64 +set com_soundMegs 64 +seta cl_maxpackets 125 +seta cl_packetdup 0 +seta snaps 40 +seta rate 25000")
+
+            if err := c.Run(); err != nil { 
+               panic(err)
+            }
         }
 
         os.Exit(0)
