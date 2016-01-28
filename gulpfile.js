@@ -12,11 +12,13 @@ var commonIgnore = [
     'package.json',
     'gulpfile.js',
     'dist/',
+    'install.go',
 ];
 
 var linuxIgnore = [
     'ET.exe',
     'ETDED.exe',
+    'install.exe',
 ];
 
 var windowsIgnore = [
@@ -28,12 +30,17 @@ var windowsIgnore = [
     'et',
     'et.x86',
     'ET.xpm',
-    'install.sh',
+    'install'
 ];
 
 var cwd = process.cwd();
 
-gulp.task('default', ['build-linux', 'build-windows']);
+gulp.task('default', ['build-install', 'build-linux', 'build-windows']);
+
+gulp.task('build-install', function (done) {
+    exec('go build install.go', { cwd: cwd, env: { GOOS: 'windows', GOARCH: '386' }});
+    exec('go build install.go', { cwd: cwd, env: { GOOS: 'linux', GOARCH: 'amd64' } }, done);
+})
 
 gulp.task('build-linux', function (done) {
     var excludes = commonIgnore.concat(linuxIgnore).map(function (item) {

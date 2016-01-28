@@ -97,7 +97,12 @@ Vagrant.configure(2) do |config|
 
       if [ ! -f /usr/bin/zip ]
       then
-        apt-get install -y -qq zip
+        sudo apt-get install -y -qq zip
+      fi
+
+      if [ ! -f /usr/bin/go ]
+      then
+        sudo apt-get install -y -qq golang
       fi
   SHELL
 end
