@@ -107,6 +107,8 @@ func main() {
         etkey = etkeyDir + "/etkey"
         pbInstalled = pbpath + "/installed"
 
+        fmt.Println("Installing files to " + home)
+
         _, err = os.Stat(pbInstalled)
         isPbInstalled = !os.IsNotExist(err)
 
