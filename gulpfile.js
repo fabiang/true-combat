@@ -35,14 +35,18 @@ var windowsIgnore = [
 
 var cwd = process.cwd();
 
-gulp.task('default', ['build-install', 'build-linux', 'build-windows']);
+gulp.task('default', ['build-linux', 'build-windows']);
+gulp.task('build-install', ['build-install-linux', 'build-install-windows']);
 
-gulp.task('build-install', function (done) {
-    exec('go build install.go', { cwd: cwd, env: { GOOS: 'windows', GOARCH: '386' }});
-    exec('go build install.go', { cwd: cwd, env: { GOOS: 'linux', GOARCH: 'amd64' } }, done);
+gulp.task('build-install-linux', function (done) {
+    exec('go build install.go', { cwd: cwd, env: { GOOS: 'linux', GOARCH: 'amd64' }}, done);
 })
 
-gulp.task('build-linux', function (done) {
+gulp.task('build-install-windows', function (done) {
+    exec('go build install.go', { cwd: cwd, env: { GOOS: 'windows', GOARCH: '386' }}, done);
+})
+
+gulp.task('build-linux', ['build-install'], function (done) {
     var excludes = commonIgnore.concat(linuxIgnore).map(function (item) {
         if ('/' === item.substr(-1, 1)) {
             item = item.substr(0, item.length - 1);
@@ -55,7 +59,7 @@ gulp.task('build-linux', function (done) {
     exec(command, { cwd: cwd }, done);
 });
 
-gulp.task('build-windows', function (done) {
+gulp.task('build-windows', ['build-install'], function (done) {
     var excludes = commonIgnore.concat(windowsIgnore).map(function (item) {
             if ('/' === item.substr(-1, 1)) {
                 item += '*';
