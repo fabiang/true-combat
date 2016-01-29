@@ -3,7 +3,7 @@
 This repository tries to distribute the old game [Enemy Territory](http://www.enemy-territory.com/)
 together with [True Combat:Elite](http://www.truecombat.net/).
 
-Installing the games is still a lot of PITA. The goal of this repository is to make the installation must easier.
+Installing the games is still a lot of PITA. The goal of this repository is to make the installation much easier.
 
 ## What is included
 
@@ -14,6 +14,7 @@ Installing the games is still a lot of PITA. The goal of this repository is to m
 ## Supported operating systems
 
 - Linux
+- Windows
 
 ## Download
 
@@ -27,7 +28,7 @@ Unzip the package into a directory defined by yourself.
 
 ### Linux
 
-Just cd the the folder where you unpacked the archive and run
+Just change the directory to where you've unpacked the archive and run:
 
 ```
 ./install
@@ -100,14 +101,8 @@ git lfs fetch
 [Gulp](http://gulpjs.com) is used as build platform specific packages.
 The Vagrant VM provides Nodejs, npm and gulp preinstalled.
 
-To compile for Linux run:
+To compile the Go progam and build platform packages execute:
 
 ```
-gulp build-linux
-```
-
-and for Windows:
-
-```
-gulp build-windows
+gulp
 ```
