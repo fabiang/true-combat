@@ -28,6 +28,14 @@ Unzip the package into a directory defined by yourself.
 
 ### Linux
 
+#### Ubuntu 16.04
+
+Install `libstdc++5`:
+
+```
+sudo apt install libstdc++5:i386
+```
+
 Just change the directory to where you've unpacked the archive and run:
 
 ```
